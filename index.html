@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Webb Captures Celestial Fireworks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #c69c6d;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .fact {
+            background-color: #e9f5ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .quiz {
+            margin-top: 20px;
+            background-color: #e9f5ff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>NASA's Webb Captures Celestial Fireworks Around Forming Star</h1>
+        <img src="https://stsci-opo.org/STScI-01J0BY5NWGXKR165XPC66KS4PT.png" alt="Webb Telescope Observation">
+        
+        <p>The James Webb Space Telescope (JWST) has captured stunning images of a stellar nursery, where new stars are being born amidst cosmic fireworks. These observations provide invaluable insights into the formation of stars and planetary systems.</p>
+        
+        <h2>Key Highlights</h2>
+        <div class="fact">
+            <p>Webb's infrared capabilities allow it to peer through dust clouds, revealing hidden star formation processes.</p>
+        </div>
+        <div class="fact">
+            <p>This region, known as a stellar nursery, is a hub for the birth of new stars, providing astronomers with crucial data.</p>
+        </div>
+        <div class="fact">
+            <p>The telescope's observations help unravel the complexities of star formation and the dynamics of stellar evolution.</p>
+        </div>
+
+        <div class="quiz">
+            <h2>Quiz Question</h2>
+            <p>What is the primary function of the James Webb Space Telescope?</p>
+            <form id="quizForm">
+                <input type="radio" id="option1" name="mcq" value="A">
+                <label for="option1">A) To capture visible light images</label><br>
+                <input type="radio" id="option2" name="mcq" value="B">
+                <label for="option2">B) To study infrared light and star formation</label><br>
+                <input type="radio" id="option3" name="mcq" value="C">
+                <label for="option3">C) To detect cosmic rays</label><br>
+                <input type="radio" id="option4" name="mcq" value="D">
+                <label for="option4">D) To map the surface of Mars</label><br>
+                <button type="button" onclick="checkAnswer()">Submit</button>
+            </form>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const options = document.getElementsByName('mcq');
+            let selectedOption;
+            for (const option of options) {
+                if (option.checked) {
+                    selectedOption = option.value;
+                    break;
+                }
+            }
+            const resultDiv = document.getElementById('result');
+            if (selectedOption === 'B') {
+                resultDiv.textContent = "Correct! The primary function of JWST is to study infrared light and star formation.";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Incorrect. The correct answer is B) To study infrared light and star formation.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
